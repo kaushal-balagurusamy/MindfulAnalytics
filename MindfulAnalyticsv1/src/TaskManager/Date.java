@@ -36,11 +36,14 @@ public class Date {
         System.out.print(Day);
         System.out.print("/");
         System.out.print(Year);
+        System.out.println(' ');
 
     }
 
     public static void main(String args[]) {
         Date c = currentDate();
+        Date e = new Date(12, 2019, 12);
+        e.printDate();
         c.printDate();
 
     }
