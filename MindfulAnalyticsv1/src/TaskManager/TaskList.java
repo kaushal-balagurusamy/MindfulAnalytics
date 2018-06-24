@@ -1,10 +1,13 @@
 package TaskManager;
 
-public class TaskList {
+import java.util.ArrayList;
+
+public class EventList {
     /*
     Create an event (for Calendar)
         • task field
-        • start/end times fields
         •
      */
+    ArrayList<Event> events = new ArrayList<>();
+
 }

@@ -24,14 +24,26 @@ public class Task {
     String title;
     String description;
     String category;
+    Time startTime;
+    Time endTime;
 
     //constructor
-    Task(Date d, String t, String de, String ca) {
+    Task(Date d, String t, String de, String ca, Time st, Time et) {
         creationDate = Date.currentDate();
         dueDate = d;
         title = t;
         description = de;
         category = ca;
+        startTime = st;
+        endTime = et;
+    }
+
+    void changeStartTime(Time t) {
+        startTime = t;
+    }
+
+    void changeEndTime(Time t) {
+        endTime = t;
     }
 
     void updateDueDate(Date d) {
