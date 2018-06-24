@@ -1,5 +1,4 @@
 package TaskManager;
-
 public class Task {
     /*
     ********maybe use interface inheritence from events for this idk
@@ -17,8 +16,7 @@ public class Task {
     Methods:
         • clear task
         • constructor
-        • add description
-        • add category
+        • update fields
         • change date
     */
     private final Date creationDate;
@@ -28,21 +26,27 @@ public class Task {
     String category;
 
     //constructor
-    Task(Date c, Date d, String t, String de, String ca) {
-        creationDate = c;
+    Task(Date d, String t, String de, String ca) {
+        creationDate = Date.currentDate();
         dueDate = d;
         title = t;
         description = de;
         category = ca;
     }
 
-    void updateTask(Date d, String t, String de, String ca) {
+    void updateDueDate(Date d) {
         dueDate = d;
-        title = t;
-        description = de;
-        category = ca;
     }
 
+    void updateTitle(String t) {
+        title = t;
+    }
+    void updateDescription(String d) {
+        description = d;
+    }
+    void updateCategory(String c) {
+        category = c;
+    }
 
 
 
