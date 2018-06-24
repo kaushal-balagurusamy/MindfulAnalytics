@@ -2,12 +2,12 @@ package TaskManager;
 
 import java.util.ArrayList;
 
-public class EventList {
+public class TaskList {
     /*
     Create an event (for Calendar)
         • task field
         •
      */
-    ArrayList<Event> events = new ArrayList<>();
+    ArrayList<Task> tasks = new ArrayList<>();
 
 }
