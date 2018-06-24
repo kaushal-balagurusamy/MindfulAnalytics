@@ -10,20 +10,25 @@ public class Time {
     }
 
     public static Time currentTime() {
-        LocalDate date = LocalDate.now();
+        LocalDateTime date = LocalDateTime.now();
         DateTimeFormatter HourFormat = DateTimeFormatter.ofPattern("HH");
         DateTimeFormatter MinuteFormat = DateTimeFormatter.ofPattern("mm");
-        String Htext = date.format(HourFormat);
-        String Mtext = date.format(MinuteFormat);
+        String Htext = HourFormat.format(date);
+        String Mtext = MinuteFormat.format(date);
         int hour = Integer.parseInt(Htext);
         int minute = Integer.parseInt(Mtext);
         Time t = new Time(minute, hour);
         return t;
     }
-    public void printDate() {
+    public void printTime() {
         System.out.print(Hour);
         System.out.print(":");
         System.out.print(Minute);
         System.out.println(' ');
+    }
+
+    public static void main(String[] args) {
+        Time c = currentTime();
+        c.printTime();
     }
 }
