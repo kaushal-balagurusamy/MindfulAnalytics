@@ -7,6 +7,8 @@ public class Date {
     int Year;
     int Month;
     int Day;
+    CalendarTrack.DaySlot Slot;
+
     //creates new date and sets it to class's year, month, and day values.
     Date(int m, int y, int d) {
         Year = y;
