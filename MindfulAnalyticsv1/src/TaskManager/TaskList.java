@@ -4,10 +4,11 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 public class TaskList implements Iterable<Task> {
-    /*
-    Create an event (for Calendar)
-        • task field
-        •
+    /**
+     * Design:
+     *  • Lightweight list of tasks that's resizable and supports for-each iteration
+     *  • streamlines accessing tasks and will form basis of a list view that uses this class
+     *  • to clarify this class itself should not contain the code for the front end list view
      */
     public class taskIterator implements Iterator<Task> {
         int index = 0;

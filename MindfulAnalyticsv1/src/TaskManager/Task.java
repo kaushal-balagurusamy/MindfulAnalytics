@@ -1,12 +1,13 @@
 package TaskManager;
 public class Task {
-    /*
-    ********maybe use interface inheritence from events for this idk
+    /**
     DESIGN:
-        Essentially I want to find the perfect middle ground for what's too much data to be
-        associated with a task, and what's too little. The middle point will expedite
-        processes that require certain generic data that every task should travel with.
-        Other fields are probably auxiliary and can just be thrown on top
+        • Building block of the program
+        • Calendar view/pie chart view/list view will all share task objects from a task list
+        • this creates space efficient storage and modification of tasks, change one, change all
+        • these objects carry all info common to every view (some views may have other information
+            pertaining/calculated from a task's fundamental fields that we don't need other classes
+            to have access to
     Fields:
         • Creation Date
         • Due Date

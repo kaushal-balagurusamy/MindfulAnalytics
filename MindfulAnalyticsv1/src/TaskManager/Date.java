@@ -4,13 +4,18 @@ import java.time.*;
 import java.time.format.*;
 public class Date {
 
+    /**
+     * A lightweight class that packages mm/dd/yyyy int fields together for efficient storage
+     * comes with methods to pull current date to initialize creationDate when creating new tasks
+     */
+
     int Year;
     int Month;
     int Day;
-    CalendarTrack.DaySlot Slot;
+
 
     //creates new date and sets it to class's year, month, and day values.
-    Date(int m, int y, int d) {
+    Date(int m, int d, int y) {
         Year = y;
         Month = m;
         Day = d;
@@ -34,7 +39,7 @@ public class Date {
     }
 
     //prints date
-    //EX: Date c = new Date(12, 2018, 4);
+    //EX: Date c = new Date(12, 4, 2018);
     //    c.printDate();
     public void printDate() {
         System.out.print(Month);
